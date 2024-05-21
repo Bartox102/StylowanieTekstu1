@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylowanieTekstu1.MainPage"
+             Padding="100">
+
+    <StackLayout>
+        
+            <VerticalStackLayout>
+           
+            <Label  x:Name="sliderLabel" Text="Rozmiar: 0" FontSize="25"/>
+            <Slider x:Name="slider" ValueChanged="OnSliderValueChanged"
+                Minimum="0" Maximum="48" MaximumTrackColor="Gray" MinimumTrackColor="blue" ThumbColor="blue"/>
+            <Picker Title="Pozycja tekstu" FontSize="25" x:Name="textAlignmentPicker">
+                <Picker.Items>
+                    <x:String>End</x:String>
+                    <x:String>Center</x:String>
+                    <x:String>Start</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Pogrubiony tekst?" FontSize="25"/>
+            <Switch HorizontalOptions="End" x:Name="boldSwitch"/>
+            <Label Text="Pochylony tekst?" FontSize="25"/>
+            <Switch HorizontalOptions="End" x:Name="italicSwitch"/>
+            <Button Text="Zatwierdź ustawienia" Background="#558B2F" Clicked="OnApplySettingsClicked"/>
+            <BoxView HeightRequest="3" Margin="10, 50, 10, 10" BackgroundColor="#558B2F"/>
+            <Label x:Name="resultLabel" Text="Podgląd tekstu" FontSize="0"/>
+        </VerticalStackLayout>
+        </StackLayout> 
+
+</ContentPage>
